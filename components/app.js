@@ -12,6 +12,10 @@ const person =
 
 const App = () => {
     const [selectedHouse, setSelectedHouse] = useState();
+
+    const setSelectedHouseWrapper = (house) => {
+        setSelectedHouse(house);
+    }
     return ( 
     <>
         <TestProps person={person}>
@@ -22,7 +26,7 @@ const App = () => {
         {selectedHouse ? (
         <House house={selectedHouse} />
         ) : ( 
-        <HouseList selectHouse={setSelectedHouse} /> 
+        <HouseList selectHouse={setSelectedHouseWrapper} /> 
         )}
         <MyButton>
         </MyButton>
