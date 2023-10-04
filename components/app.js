@@ -21,7 +21,7 @@ const App = () => {
         <TestProps person={person}>
         </TestProps>
         <Banner>  
-            Providing house all over the world
+            Providing houses all over the world
         </Banner>
         {selectedHouse ? (
         <House house={selectedHouse} />
