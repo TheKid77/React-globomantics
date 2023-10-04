@@ -12,17 +12,21 @@ const person =
 
 const App = () => {
     const [selectedHouse, setSelectedHouse] = useState();
+
+    const setSelectedHouseWrapper = (house) => {
+        setSelectedHouse(house);
+    }
     return ( 
     <>
         <TestProps person={person}>
         </TestProps>
         <Banner>  
-            Providing house all over the world
+            Providing houses all over the world
         </Banner>
         {selectedHouse ? (
         <House house={selectedHouse} />
         ) : ( 
-        <HouseList selectHouse={setSelectedHouse} /> 
+        <HouseList selectHouse={setSelectedHouseWrapper} /> 
         )}
         <MyButton>
         </MyButton>
