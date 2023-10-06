@@ -6,7 +6,7 @@ const subtitleStyle = {
     fontSize: "x-large",
     color: "coral",
 };
-const Banner = ({children}) => {
+const Banner = ({headerText}) => {
     return (
     <header className="row mb-4">
         <div className="col-5">
@@ -14,7 +14,7 @@ const Banner = ({children}) => {
             <img src="./GloboLogo.png" alt="logo" className={logo}/>            
         </div>
         <div className="col-7 mt-5" style = {subtitleStyle}>
-            {children}
+            {headerText}
         </div>
     </header>
     );

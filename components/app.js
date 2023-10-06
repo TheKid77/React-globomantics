@@ -3,7 +3,10 @@ import Banner from "./banner"
 import HouseList from "./houseList";
 import TestProps from "./testProps";
 import MyButton from "./counterButton";
+import Box from '@mui/material/Box';
+import Button from "@mui/material/Button"
 import House from "./house";
+import CameraIcon from '@mui/icons-material/Camera';
 const person = 
     {
       name: "Andy",
@@ -12,7 +15,7 @@ const person =
 
 const App = () => {
     const [selectedHouse, setSelectedHouse] = useState();
-
+    
     const setSelectedHouseWrapper = (house) => {
         setSelectedHouse(house);
     }
@@ -20,9 +23,9 @@ const App = () => {
     <>
         <TestProps person={person}>
         </TestProps>
-        <Banner>  
-            Providing houses all over the world
+        <Banner headerText="Providing houses all over the world">  
         </Banner>
+
         {selectedHouse ? (
         <House house={selectedHouse} />
         ) : ( 
@@ -30,6 +33,17 @@ const App = () => {
         )}
         <MyButton>
         </MyButton>
+        <Box sx={{ '& button': { m: 1 } }}>
+            <div>
+                <Button
+                fullWidth
+                size="large"
+                variant="contained" 
+                color="success">
+                    Click
+                </Button>
+            </div>
+        </Box>
     </>
     );
 };
