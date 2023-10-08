@@ -6,7 +6,8 @@ import MyButton from "./counterButton";
 import Box from '@mui/material/Box';
 import Button from "@mui/material/Button"
 import House from "./house";
-import CameraIcon from '@mui/icons-material/Camera';
+import Stack from "./avatar"
+
 const person = 
     {
       name: "Andy",
@@ -44,6 +45,7 @@ const App = () => {
                 </Button>
             </div>
         </Box>
+        <Stack></Stack>
     </>
     );
 };

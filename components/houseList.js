@@ -14,7 +14,7 @@ const HouseList = ({selectHouse}) => {
     setHouses([
       ...houses,
       {
-        id: 3,
+        id: 6,
         address: "100 Acacia Avenue, London",
         country: "England",
         price: 750000,
