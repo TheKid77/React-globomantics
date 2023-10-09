@@ -50,7 +50,7 @@ const HouseList = ({selectHouse}) => {
           </tr>
         </thead>
         <tbody>
-          {houses.map(h => <HouseRow key={h.id} house={h} selectHouse={selectHouse}/>)}
+          {houses.map(h => <HouseRow key={h.id} house={h} />)}
         </tbody>
       </table>
       <button className="btn btn-primary" onClick={addHouse}>
