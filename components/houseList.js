@@ -1,7 +1,7 @@
 import useHouses from "../hooks/useHouses";
 import HouseRow from "./houseRow";
 import loadingStatus from "@/helpers/loadingStatus";
-import LoadingIndicator from "./loadingindicator";
+import LoadingIndicator from "./loadingIndicator";
 
 const HouseList = ({selectHouse}) => {
 
