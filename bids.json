@@ -83,6 +83,18 @@
       "bidder": "Andy ",
       "amount": 201000,
       "id": 14
+    },
+    {
+      "houseId": 1,
+      "bidder": "Dave",
+      "amount": 195000,
+      "id": 15
+    },
+    {
+      "houseId": 4,
+      "bidder": "Paul",
+      "amount": 445000,
+      "id": 16
     }
   ]
 }
