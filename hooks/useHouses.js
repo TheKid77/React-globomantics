@@ -8,12 +8,14 @@ const useHouses = () => {
     const { get, loadingState } = useGetRequest("api/houses");
 
     useEffect(() => {
+        console.log("IN EFFECT");
         const fetchHouses = async () => {
         const houses = await get();
         setHouses(houses);
         };
         fetchHouses();
     }, [get]);
+    console.log("IN MAIN");
 
     return { houses, setHouses, loadingState }
 }
