@@ -10,12 +10,12 @@ const State = () => {
   
     const increaseByOne = () => {
       console.log('increasing, value before', counter)
-      setCounter(counter + 1)
+      setCounter(current => counter + 1)
     }
   
     const decreaseByOne = () => { 
       console.log('decreasing, value before', counter)
-      setCounter(counter - 1)
+      setCounter(current => counter - 1)
     }
   
     const setToZero = () => {
@@ -34,11 +34,11 @@ const State = () => {
         <Grid container spacing={3} justifyContent="center" alignItems="center">
             <Grid item>
                 <Box bgcolor="primary.light" p={2}>
-                <Button variant="contained" onClick={decreaseByOne}>minus</Button>
+                    <Button variant="contained" onClick={decreaseByOne}>minus</Button>
                 </Box>
             </Grid>
             <Grid item>
-                <Box bgcolor="secondary.light" p={2}>
+                <Box bgcolor="primary.light" p={2}>
                     <Button variant="contained" onClick={setToZero}>zero</Button> 
                 </Box>
             </Grid>
