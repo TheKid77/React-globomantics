@@ -95,6 +95,12 @@
       "bidder": "Paul",
       "amount": 445000,
       "id": 16
+    },
+    {
+      "houseId": 2,
+      "bidder": "Andy",
+      "amount": 20,
+      "id": 17
     }
   ]
 }
