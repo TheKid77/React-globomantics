@@ -9,6 +9,7 @@ import House from "./house";
 import Stack from "./avatar"
 import navValues from "@/helpers/navValues";
 import ComponentPicker from "./componentPicker";
+import State from "./statePlay";
 
 const person = 
     {
@@ -47,6 +48,7 @@ const App = () => {
             </div>
         </Box>
         <Stack></Stack>
+        <State></State>
     </navigationContext.Provider>
     );
 };
