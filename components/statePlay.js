@@ -6,42 +6,44 @@ import Display from "./display";
 
 
 const State = () => {
-    const [counter, setCounter] = useState(0)
-    console.log('rendering with counter value', counter)
+    const [counter, setCounter] = useState(0);
+    console.log('rendering with counter value', counter);
   
     const increaseByOne = () => {
-      console.log('increasing, value before', counter)
-      setCounter(current => counter + 1)
+      console.log('increasing, value before', counter);
+      setCounter(current => counter + 1);
     }
   
     const decreaseByOne = () => { 
-      console.log('decreasing, value before', counter)
-      setCounter(current => counter - 1)
+      console.log('decreasing, value before', counter);
+      setCounter(current => counter - 1);
     }
   
     const setToZero = () => {
-      console.log('resetting to zero, value before', counter)
-      setCounter(0)
+      console.log('resetting to zero, value before', counter);
+      setCounter(0);
     }
 
-    const [allClicks, setAll] = useState([])
     const [clicks, setClicks] = useState({
         left: 0, right: 0
-      })
+      });
+    const [allClicks, setAll] = useState([])
 
     const handleLeftClick = () => {
         const newClicks = { 
+          ...clicks,
           left: clicks.left + 1, 
-          right: clicks.right 
         }
+        setAll(allClicks.concat('L'))
         setClicks(newClicks)
     }
     
     const handleRightClick = () => {
         const newClicks = { 
-          left: clicks.left, 
+          ...clicks,
           right: clicks.right + 1 
         }
+        setAll(allClicks.concat('R'))
         setClicks(newClicks)
     }
   
@@ -54,17 +56,17 @@ const State = () => {
         </Grid>
 
         <Grid container spacing={3} justifyContent="center" alignItems="center">
-            <Grid item>
+            <Grid item xs={4}>
                 <Box bgcolor="primary.light" p={2}>
                     <Button variant="contained" onClick={decreaseByOne}>minus</Button>
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs={4}>
                 <Box bgcolor="primary.light" p={2}>
                     <Button variant="contained" onClick={setToZero}>zero</Button> 
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs={4}>
                 <Box bgcolor="primary.light" p={2}>
                     <Button variant="contained" onClick={increaseByOne}>plus</Button> 
                 </Box>
@@ -74,29 +76,36 @@ const State = () => {
             <Divider>CENTER</Divider>
         </div>
 
-        <Grid container spacing={3} justifyContent="center" alignItems="center">
-            <Grid item>
+        <Grid container spacing={4} justifyContent="center" alignItems="center">
+            <Grid item xs={3}>
                 <Box bgcolor="primary.light" p={2}>
                     <Button variant="contained" onClick={handleLeftClick}>left</Button> 
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs={3}>
                 <Box bgcolor="primary.light" p={2}>
                     <Display counter={clicks.left} />
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs={3}>
                 <Box bgcolor="primary.light" p={2}>
                     <Display counter={clicks.right} />
                 </Box>
             </Grid>
-            <Grid item>
+            <Grid item xs={3}>
                 <Box bgcolor="primary.light" p={2}>
                     <Button variant="contained" onClick={handleRightClick}>right</Button> 
                 </Box>
             </Grid>
         </Grid>
 
+        <Grid container spacing={12} justifyContent="center" alignItems="center">
+            <Grid item xs={3}>
+                <Box bgcolor="primary.light" p={2}>
+                <p>{allClicks.join(' ')}</p>
+                </Box>
+            </Grid>
+        </Grid>
       </>
     )
   } 
