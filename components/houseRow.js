@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import currencyFormatter from "../helpers/currencyFormatter"
-import navValues from "@/helpers/navValues";
+import navValues from "../helpers/navValues";
 import { navigationContext } from "./app";
 const HouseRow = ({house}) => {
     

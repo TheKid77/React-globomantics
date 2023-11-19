@@ -6,8 +6,8 @@ import MyButton from "./counterButton";
 import Box from '@mui/material/Box';
 import Button from "@mui/material/Button"
 import House from "./house";
-import Stack from "./avatar"
-import navValues from "@/helpers/navValues";
+import Stack from "./avatar";
+import navValues from "../helpers/navValues";
 import ComponentPicker from "./componentPicker";
 import State from "./statePlay";
 
@@ -34,8 +34,8 @@ const App = () => {
         </Banner>
         <ComponentPicker currentNavLocation={nav.current} />
 
-        <MyButton>
-        </MyButton>
+        {/* <MyButton>
+        </MyButton> */}
         <Box sx={{ '& button': { m: 1 } }}>
             <div>
                 <Button

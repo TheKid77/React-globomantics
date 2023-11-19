@@ -101,6 +101,12 @@
       "bidder": "Andy",
       "amount": 20,
       "id": 17
+    },
+    {
+      "houseId": 3,
+      "bidder": "1",
+      "amount": 1,
+      "id": 18
     }
   ]
 }
